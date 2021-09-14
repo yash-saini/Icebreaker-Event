@@ -2,14 +2,14 @@
 """
 Created on Fri Sep  3 00:31:47 2021
 
-@author: ysaini
+@author: yash
 """
 
 from tkinter import *
 from PIL import ImageTk, Image
 import random
 import json
-with open(r"C:\Users\ysaini\Desktop\Desk\Providence\Icebreaker_Event\data.json") as f: 
+with open(r"data.json") as f: 
     data1 = json.load(f)
 l=data1['Questions']
 
@@ -23,8 +23,8 @@ window.geometry('1000x800')
 canvas1 = Canvas(window, width = 1500,height = 800)
 canvas1.pack(fill = "both", expand = True)
 
-#bg=ImageTk.PhotoImage(Image.open(r"C:\Users\ysaini\Desktop\Desk\Providence\Icebreaker_Event\Water_image.jpg"))
-bg1=PhotoImage(file=r"C:\Users\ysaini\Desktop\Desk\Providence\Icebreaker_Event\stadium5.png")
+#bg=ImageTk.PhotoImage(Image.open(r"Water_image.jpg"))
+bg1=PhotoImage(file=r"stadium5.png")
 
 #Display image
 canvas1.create_image( 0, 0, image = bg1, anchor = "nw")
